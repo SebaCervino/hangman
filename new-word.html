@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang= "es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+        <title>HANGMAN GAME</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="icon" href="./img/icon.jpg" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <h1><img id="logoAlura" src="./img/logo-blanco.svg" alt="Logo Alura"></h1>
+            <h2>HANGMAN GAME</h2>
+        </header>
+        <main class="espacios-contenidos">
+            <textarea id="ingresar-palabra" placeholder="Ingrese una palabra"></textarea>
+            <section id="botones-palabra">
+                <div class="espacio-errores">
+                    <p class="invisible" id="texto-con-numeros">No se admiten numeros en el juego</p>
+                    <p class="invisible" id="mas-ocho">La palabra no puede tener más de 8 letras</p>
+                    <p class="invisible" id="menos-uno">No se permiten valores vacíos</p>
+                    <p class="invisible" id="no-acentos">No se permiten letras con acentos ni caracteres especiales</p>
+                </div>
+
+                <div id="contenedor-alerta">
+                    <img class="img-alert" src="./img/alerta.svg" alt="Simbolo de alerta">
+                    <p class="text-alert">Máx. de 8 letras </p>
+                </div>
+
+                <button class="boton-azul" id="btn-guardar">Guardar y empezar</button>
+                <a href="./index.html"><button class="boton-claro" id="btn-cancelar">Cancelar</button></a>
+
+            </section>
+            
+            <script src="./js/nuevaPalabra.js"></script>
+
+        </main>
+
+        <footer id="contenedor-footer">
+            <p id="info-copy"> &#169; Sebastián Emiliano Cervino</p></br>
+            <p id="info-copy">Sprint 2 - Alura Challenge - Oracle Next Education</p></br>
+            <div>
+                <a href="http://www.seguridadtecnicaintegral.com" target="_blank"><img src="./img/www.png" class="logos"></a>
+                <a href="https://github.com/SebaCervino/" target="_blank"><img src="./img/github.svg" class="logos" ></a>
+                <a href="https://ar.linkedin.com/in/sebastian-emiliano-cervino-3ba077a4" target="_blank"><img src="./img/linkedin.svg" class="logos"></a>
+            </div>
+        </footer>
+    </body>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/dibujarJuego.js"></script>
+    <script src="./js/juego.js"></script>
+</html>
